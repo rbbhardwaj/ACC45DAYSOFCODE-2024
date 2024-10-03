@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    
+    while (T--) {
+        int X, Y;
+        cin >> X >> Y;
+        int pointsAFirst = max(0, 500 - 2 * X) + max(0, 1000 - 4 * (X + Y));
+        int pointsBFirst = max(0, 500 - 2 * (Y + X)) + max(0, 1000 - 4 * Y);
+        int maxPoints = max(pointsAFirst, pointsBFirst);
+        
+        cout << maxPoints << endl;
+    }
+
+    return 0;
