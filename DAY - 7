@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    while (T--) {
+        int N, A;
+        cin >> N >> A;
+        int to_mask = A;
+        int safe_people = N - A;
+        if (safe_people < A) {
+            to_mask = safe_people;
+        }
+        cout << to_mask << endl;
+    }
+    return 0;
+}
