@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    vector<int> results;
+
+    while (T--) {
+        int N, X;
+        cin >> N >> X;
+        int flipsToFaceUp = N - X;
+        int flipsToFaceDown = X;
+        
+        int minFlips = min(flipsToFaceUp, flipsToFaceDown);
+        results.push_back(minFlips);
+    }
+    for (int result : results) {
+        cout << result << endl;
+    }
+    return 0;
