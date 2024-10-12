@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    while (T--) {
+        int N, K, M;
+        cin >> N >> K >> M;
+        
+        int maxCapacity = K * M;
+        int bagsNeeded = (N + maxCapacity - 1) / maxCapacity;
+        
+        cout << bagsNeeded << endl;
+    }
+    return 0;
+}
