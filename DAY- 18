@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int H, X, Y;
+        cin >> H >> X >> Y;
+        int healthAfterSpecial = H - Y;
+        int attacks;
+
+        if (healthAfterSpecial <= 0) {
+            attacks = 1;
+        } else {
+            attacks = 1 + ceil(static_cast<double>(healthAfterSpecial) / X);
+        }
+        cout << attacks << endl;
+    }
+    return 0;
+}
