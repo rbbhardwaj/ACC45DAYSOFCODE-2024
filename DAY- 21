@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int N;
+        cin >> N;
+
+        int fingers[N];
+        int sheaths[N];
+
+       
+        for (int i = 0; i < N; i++) {
+            cin >> fingers[i];
+        }
+
+        
+        for (int i = 0; i < N; i++) {
+            cin >> sheaths[i];
+        }
+
+    
+        int frontFitCount = 0;
+        int backFitCount = 0;
+
+        
+        for (int i = 0; i < N; i++) {
+            if (fingers[i] <= sheaths[i]) {
+                frontFitCount++;
+            }
+        }
+
+       
+        for (int i = 0; i < N; i++) {
+            if (fingers[i] <= sheaths[N - 1 - i]) {
+                backFitCount++;
+            }
+        }
+
+        
+        
+        if (frontFitCount == N && backFitCount == N) {
+            cout << "both" << endl;
+        } else if (frontFitCount == N) {
+            cout << "front" << endl;
+        } else if (backFitCount == N) {
+            cout << "back" << endl;
+        } else {
+            cout << "none" << endl;
+        }
+    }
+
+    return 0;
+}
