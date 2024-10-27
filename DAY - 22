@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+    int T;
+    std::cin >> T;
+    
+    while (T--) {
+        int a, b, c, d;
+        std::cin >> a >> b >> c >> d;
+
+        int maxTastiness = std::max(a + c, b + c);
+        maxTastiness = std::max(maxTastiness, a + d);
+        maxTastiness = std::max(maxTastiness, b + d); 
+        
+        std::cout << maxTastiness << std::endl;
+    }
+    return 0;
+}
