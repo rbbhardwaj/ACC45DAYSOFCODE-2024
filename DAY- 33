@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int N;
+        cin >> N;
+
+        int full_weeks = N / 7;
+        int leftover_days = N % 7;
+
+        int tuesdays = full_weeks;
+
+        if (leftover_days >= 2) {
+            tuesdays++;
+        }
+
+        cout << tuesdays << endl;
+    }
+
+    return 0;
+}
