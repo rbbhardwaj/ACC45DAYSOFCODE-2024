@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int N, A, B;
+        cin >> N >> A >> B;
+
+        int total_time = 0;
+        int rounds = 0;
+
+        while (N > 1) {
+            total_time += A;
+            rounds++;
+            N /= 2;
+        }
+        total_time += B * (rounds - 1); 
+
+        cout << total_time << endl;
+    }
+    return 0;
+}
