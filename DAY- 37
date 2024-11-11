@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int X, Y;
+    cin >> X >> Y;
+
+    int time_for_first_Y = Y / 2;
+
+    int time_for_remaining = X - Y;
+
+    int total_time = time_for_first_Y + time_for_remaining;
+
+    cout << total_time << endl;
+
+    return 0;
+}
