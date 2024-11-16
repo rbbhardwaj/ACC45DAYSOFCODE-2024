@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        long long N;
+        cin >> N;
+
+        long long full_sets = N / 5;
+        long long remaining_gifts = N % 5;
+
+        long long min_coins = full_sets * 4 + remaining_gifts;
+
+        cout << min_coins << endl;
+    }
+    return 0;
+}
